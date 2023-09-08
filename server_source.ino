@@ -25,22 +25,22 @@ void setupServer() {
   }
   
   void handleForward() {
-    // Implement forward movement logic here
-    server.send(200, "text/plain", "Moving forward");
-  }
-  
-  void handleLeft() {
-    // Implement left turn logic here
-    server.send(200, "text/plain", "Turning left");
-  }
-  
-  void handleRight() {
-    // Implement right turn logic here
-    server.send(200, "text/plain", "Turning right");
-  }
-  
-  void handleStop() {
-    // Implement stop logic here
-    server.send(200, "text/plain", "Stopped");
-  }
+  moveForward();
+  server.send(200, "text/plain", "Moving forward");
+}
+
+void handleLeft() {
+  turnLeft();
+  server.send(200, "text/plain", "Turning left");
+}
+
+void handleRight() {
+  turnRight();
+  server.send(200, "text/plain", "Turning right");
+}
+
+void handleStop() {
+  stop();
+  server.send(200, "text/plain", "Stopped");
+}
   
