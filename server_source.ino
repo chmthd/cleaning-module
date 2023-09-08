@@ -1,5 +1,6 @@
-#include "WebServer.h"
+#include "server_header.h"
 #include "config.h"
+#include "ArduinoRobotControl.ino"
 
 void setupServer() {
     server.on("/", HTTP_GET, handleRoot);
